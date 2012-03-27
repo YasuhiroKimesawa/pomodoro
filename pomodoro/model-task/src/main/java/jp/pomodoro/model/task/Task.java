@@ -4,6 +4,6 @@ public class Task
 {
     public int sampleCals()
     {
-        return 3;
+        return 4;
     }
 }
