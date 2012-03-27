@@ -1,1 +1,27 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
+
+subprojects
+{
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+
+    buildDir="target"
+    libsDirName=buildDir
+
+    repositories
+    {
+       mavenCentral()
+    }
+
+    dependencies
+    {
+        testCompile 'junit:junit:4.8.2'
+    }
+
+    configure(subprojects.findAll {it.name.substring(0, 3 ) == 'web-'})
+    {
+        apply plugin: 'war'
+    }
+
+}
