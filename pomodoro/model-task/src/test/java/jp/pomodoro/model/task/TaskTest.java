@@ -10,7 +10,7 @@ public class TaskTest
     @Test
     public void testSampleCals()
     {
-        assertEquals( 3, new Task().sampleCals() );
+        assertEquals( 4, new Task().sampleCals() );
     }
 
 }
