@@ -1,0 +1,58 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+configurations{
+    cobertura
+}
+
+dependencies {
+    cobertura "net.sourceforge.cobertura:cobertura:1.9.4.1"
+}
+
+tmpDir = new File(buildDir, "tmp")
+
+coberturaReportDirName    = "cobertura"
+coberturaReportDir        = new File(reportsDir, coberturaReportDirName)
+coberturaTmpDirName       = "cobertura"
+coberturaTmpDir           = new File(tmpDir, coberturaTmpDirName)
+coberturaInstrDirName     = "instr"
+coberturaInstrDir         = new File(coberturaTmpDir, coberturaInstrDirName)
+coberturaMetaDataFileName = "cobertura.ser"
+coberturaMetaDataFile     = new File(coberturaTmpDir, coberturaMetaDataFileName)
+
+test {
+
+    jvmArgs "-Dnet.sourceforge.cobertura.datafile=${coberturaMetaDataFile}"
+
+    doFirst
+    {
+
+        ant
+        {
+            taskdef(resource: 'tasks.properties', classpath: configurations.cobertura.asPath)
+
+            'cobertura-instrument'(todir: coberturaInstrDir, datafile:coberturaMetaDataFile)
+            {
+                fileset(dir: sourceSets.main.output.classesDir)
+            }
+        }
+
+        classpath = files("${coberturaInstrDir}") + configurations.cobertura + classpath
+    }
+
+    doLast {
+        ant {
+            'cobertura-report'(destdir: coberturaReportDir,
+                              datafile:coberturaMetaDataFile,
+                                format:'xml') {
+                sourceSets.main.allJava.srcDirs.each { fileset(dir: it) }
+            }
+
+            'cobertura-report'(destdir: coberturaReportDir,
+                              datafile:coberturaMetaDataFile,
+                                format:'html') {
+                sourceSets.main.allJava.srcDirs.each { fileset(dir: it) }
+            }
+        }
+    }
+}
