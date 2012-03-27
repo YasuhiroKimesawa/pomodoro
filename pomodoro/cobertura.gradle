@@ -24,15 +24,16 @@ test {
 
     jvmArgs "-Dnet.sourceforge.cobertura.datafile=${coberturaMetaDataFile}"
 
-    doFirst {
+    doFirst
+    {
 
-        ant {
-            taskdef(resource: 'tasks.properties',
-                   classpath: configurations.cobertura.asPath)
+        ant
+        {
+            taskdef(resource: 'tasks.properties', classpath: configurations.cobertura.asPath)
 
-            'cobertura-instrument'(todir: coberturaInstrDir,
-                                datafile:coberturaMetaDataFile) {
-                fileset(dir: sourceSets.main.classesDir)
+            'cobertura-instrument'(todir: coberturaInstrDir, datafile:coberturaMetaDataFile)
+            {
+                fileset(dir: sourceSets.main.output.classesDir)
             }
         }
 
