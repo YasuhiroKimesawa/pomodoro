@@ -9,6 +9,8 @@ subprojects
     buildDir="target"
     libsDirName=buildDir
 
+    apply from: '../cobertura.gradle'
+
     repositories
     {
        mavenCentral()
