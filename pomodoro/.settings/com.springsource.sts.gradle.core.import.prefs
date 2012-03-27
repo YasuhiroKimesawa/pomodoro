@@ -1,0 +1,7 @@
+#com.springsource.sts.gradle.core.preferences.GradleImportPreferences
+#Tue Mar 27 13:15:16 JST 2012
+enableAfterTasks=true
+afterTasks=afterEclipseImport;
+enableBeforeTasks=false
+projects=model-task;
+beforeTasks=cleanEclipse;eclipse;
