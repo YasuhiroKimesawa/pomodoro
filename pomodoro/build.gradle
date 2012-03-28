@@ -1,29 +1,37 @@
-apply plugin: 'java'
-apply plugin: 'eclipse'
-
-subprojects
+allprojects
 {
     apply plugin: 'java'
     apply plugin: 'eclipse'
+    apply plugin: 'groovy'
 
     buildDir="target"
     libsDirName=buildDir
-
-    apply from: '../cobertura.gradle'
-
-    repositories
-    {
-       mavenCentral()
-    }
-
-    dependencies
-    {
-        testCompile 'junit:junit:4.8.2'
-    }
 
     configure(subprojects.findAll {it.name.substring(0, 3 ) == 'web-'})
     {
         apply plugin: 'war'
     }
+
+    eclipse
+    {
+        pathVariables 'GRADLE_USER_HOME': gradle.gradleUserHomeDir
+    }
+
+    repositories
+    {
+        mavenCentral()
+    }
+
+    dependencies
+    {
+        groovy      "org.codehaus.groovy:groovy-all:1.8.0"
+        testCompile "org.spockframework:spock-core:0.5-groovy-1.8"
+        testCompile 'junit:junit:4.8.2'
+    }
+}
+
+subprojects
+{
+    apply from: '../cobertura.gradle'
 
 }
