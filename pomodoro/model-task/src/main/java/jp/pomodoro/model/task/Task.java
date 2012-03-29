@@ -19,5 +19,11 @@ public class Task
         this.name = name;
     }
 
+    @Override
+    public String toString()
+    {
+        return "Task [name=" + name + "]";
+    }
+
 
 }
