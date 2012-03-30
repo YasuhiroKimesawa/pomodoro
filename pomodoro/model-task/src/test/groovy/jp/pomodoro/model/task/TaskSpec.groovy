@@ -10,6 +10,6 @@ class TaskSpec extends Specification
         int a = task.sampleCals()
 
         expect:
-        a == 3
+        a == 5
     }
 }
