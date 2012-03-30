@@ -6,7 +6,7 @@ public class Task
 
     public int sampleCals()
     {
-        return 3;
+        return 5;
     }
 
     public String getName()

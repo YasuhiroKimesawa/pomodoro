@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry exported="true" kind="con" path="GROOVY_DSL_SUPPORT"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry exported="true" kind="var" path="GRADLE_USER_HOME/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.2.jar" sourcepath="GRADLE_USER_HOME/cache/org.hamcrest/hamcrest-core/sources/hamcrest-core-1.2-sources.jar"/>
-	<classpathentry exported="true" kind="var" path="GRADLE_USER_HOME/cache/org.spockframework/spock-core/jars/spock-core-0.5-groovy-1.8.jar" sourcepath="GRADLE_USER_HOME/cache/org.spockframework/spock-core/sources/spock-core-0.5-groovy-1.8-sources.jar"/>
-	<classpathentry exported="true" kind="var" path="GRADLE_USER_HOME/cache/junit/junit/jars/junit-4.8.2.jar" sourcepath="GRADLE_USER_HOME/cache/junit/junit/sources/junit-4.8.2-sources.jar"/>
-	<classpathentry exported="true" kind="var" path="GRADLE_USER_HOME/cache/org.codehaus.groovy/groovy-all/jars/groovy-all-1.8.0.jar" sourcepath="GRADLE_USER_HOME/cache/org.codehaus.groovy/groovy-all/sources/groovy-all-1.8.0-sources.jar"/>
-	<classpathentry exported="true" kind="var" path="GRADLE_USER_HOME/cache/junit/junit-dep/jars/junit-dep-4.8.2.jar" sourcepath="GRADLE_USER_HOME/cache/junit/junit-dep/sources/junit-dep-4.8.2-sources.jar"/>
+	<classpathentry kind="con" path="GROOVY_DSL_SUPPORT" exported="true"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
+	<classpathentry sourcepath="GRADLE_USER_HOME/cache/org.hamcrest/hamcrest-core/sources/hamcrest-core-1.2-sources.jar" kind="var" path="GRADLE_USER_HOME/cache/org.hamcrest/hamcrest-core/jars/hamcrest-core-1.2.jar" exported="true"/>
+	<classpathentry sourcepath="GRADLE_USER_HOME/cache/org.spockframework/spock-core/sources/spock-core-0.5-groovy-1.8-sources.jar" kind="var" path="GRADLE_USER_HOME/cache/org.spockframework/spock-core/jars/spock-core-0.5-groovy-1.8.jar" exported="true"/>
+	<classpathentry sourcepath="GRADLE_USER_HOME/cache/junit/junit/sources/junit-4.8.2-sources.jar" kind="var" path="GRADLE_USER_HOME/cache/junit/junit/jars/junit-4.8.2.jar" exported="true"/>
+	<classpathentry sourcepath="GRADLE_USER_HOME/cache/org.codehaus.groovy/groovy-all/sources/groovy-all-1.8.0-sources.jar" kind="var" path="GRADLE_USER_HOME/cache/org.codehaus.groovy/groovy-all/jars/groovy-all-1.8.0.jar" exported="true"/>
+	<classpathentry sourcepath="GRADLE_USER_HOME/cache/junit/junit-dep/sources/junit-dep-4.8.2-sources.jar" kind="var" path="GRADLE_USER_HOME/cache/junit/junit-dep/jars/junit-dep-4.8.2.jar" exported="true"/>
 	<classpathentry kind="var" path="GRADLE_USER_HOME"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

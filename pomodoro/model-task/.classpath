@@ -14,5 +14,6 @@
 	<classpathentry exported="true" kind="var" path="GRADLE_USER_HOME/cache/junit/junit/jars/junit-4.8.2.jar" sourcepath="GRADLE_USER_HOME/cache/junit/junit/sources/junit-4.8.2-sources.jar"/>
 	<classpathentry exported="true" kind="var" path="GRADLE_USER_HOME/cache/org.codehaus.groovy/groovy-all/jars/groovy-all-1.8.0.jar" sourcepath="GRADLE_USER_HOME/cache/org.codehaus.groovy/groovy-all/sources/groovy-all-1.8.0-sources.jar"/>
 	<classpathentry exported="true" kind="var" path="GRADLE_USER_HOME/cache/junit/junit-dep/jars/junit-dep-4.8.2.jar" sourcepath="GRADLE_USER_HOME/cache/junit/junit-dep/sources/junit-dep-4.8.2-sources.jar"/>
+	<classpathentry kind="var" path="GRADLE_USER_HOME"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
